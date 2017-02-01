@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Description:</strong>
+  <%= @item.description %>
+</p>
+
+<p>
   <strong>Size:</strong>
   <%= @item.size %>
 </p>
@@ -11,8 +16,8 @@
 </p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @item.type %>
+  <strong>Category:</strong>
+  <%= @item.category %>
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
