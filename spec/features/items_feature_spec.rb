@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 describe "Item" do
-
+  before do
+    sign_up
+  end
   context "no items have been added" do
     scenario "should display a prompt to add an item" do
       visit '/items'
