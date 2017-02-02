@@ -22,4 +22,3 @@ config/env.yml
 
 # Ignore env files
 .env
-
