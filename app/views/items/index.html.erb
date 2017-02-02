@@ -16,11 +16,11 @@
     <% if @items.any? %>
       <% @items.each do |item| %>
         <tr>
-          <td><%= image_tag item.image.url(:thumb) %><td>
+          <td><%= image_tag item.image.url(:medium) %><td>
           <td><%= item.size %></td>
           <td><%= item.color %></td>
           <td><%= item.category %></td>
-          <td><%= item.description %></td> ##do we want to display on index?
+          <td><%= item.description %></td>
           <td><%= link_to 'Show', item %></td>
           <td><%= link_to 'Edit', edit_item_path(item) %></td>
           <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
