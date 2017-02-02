@@ -38,6 +38,14 @@ describe "Item" do
       expect(page).to have_content 'Item was successfully created'
       expect(current_path).to eq "/items"
     end
+
+    scenario 'adds an item with an image' do
+      upload_bayon_photo
+      expect(page).to have_content 'Best beast for best Halloween'
+      expect(page).to have_content 'Item was successfully created'
+      expect(page).to have_css("img[src*='ban.jpg']")
+
+    end
   end
 
 end
