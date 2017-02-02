@@ -55,7 +55,7 @@ Rails.application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_region => 'eu-west-2',
-    :bucket => 'clothes-swapping',
+    :bucket => ENV.fetch('AWS_BUCKET'),
     :s3_credentials => {:access_key_id => ENV.fetch('AWS_ACCESS_KEY_ID'),
                         :secret_access_key => ENV.fetch('AWS_SECRET_ACCESS_KEY')}
   }
